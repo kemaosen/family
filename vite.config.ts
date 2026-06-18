@@ -8,5 +8,5 @@ export default defineConfig({
   resolve: { alias: { '~src': resolve(__dirname, 'src') } },
   base: '/family/',
   build: { sourcemap: true },
-  server: { port: 8080, open: false },
+  server: { port: 8080, open: false, allowedHosts: true },
 })
