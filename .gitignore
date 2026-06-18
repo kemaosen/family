@@ -25,3 +25,9 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw?
+node_modules/  
+dist/  
+*.log  
+*.b64  
+start_vite.bat  
+*.cjs  

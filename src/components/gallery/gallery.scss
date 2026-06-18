@@ -1,0 +1,14 @@
+.stage { position: relative; width: 100%; height: 100%; background: #ccc; }
+.img-container { position: relative; width: 100%; height: 100%; background: #dedede; overflow: hidden; }
+.img-figure { position: absolute; width: 280px; height: 300px; margin: 0; padding: 0; border-radius: 3px; box-sizing: border-box; perspective: 1800px; box-shadow: 5px 5px 16px -1px rgba(0,0,0,0.19); cursor: pointer; transform-style: preserve-3d; transform-origin: 0 50% 0; transition: left 0.5s ease-in-out, top 0.5s ease-in-out, transform 0.5s ease-in-out; left: var(--figure-left,0); top: var(--figure-top,0); transform: var(--figure-transform,none); z-index: var(--figure-z-index,1); }
+.img-figure img { width: 240px; }
+.img-figure .img-title { font-size: 16px; color: #a7a2a0; margin: 5px 0 0 0; }
+.img-figure.is-center { z-index: 11; }
+.img-figure.is-reverse { transform: translate(320px) rotateY(180deg); }
+.front, .back { backface-visibility: hidden; position: absolute; top: 0; left: 0; padding: 20px; text-align: center; background: #fff; border-radius: 4px; }
+.back { width: 100%; height: 100%; transform: rotateY(180deg); }
+.front { z-index: 2; transform: rotateY(0deg); }
+.img-nav { position: absolute; left: 0; bottom: 30px; text-align: center; z-index: 100; width: 100%; }
+.img-nav .controller { display: inline-block; width: 30px; height: 30px; background: #999; border-radius: 50%; transform: scale(0.5); transition: transform 0.6s ease-in-out, background-color 0.3s; vertical-align: middle; cursor: pointer; }
+.img-nav .controller.is-center { transform: scale(1); }
+.img-nav .controller.is-center.is-reverse { background-color: #555; transform: rotateY(180deg); }
