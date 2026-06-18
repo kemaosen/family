@@ -95,13 +95,13 @@ const GalleryView = defineComponent({
         <div class="img-container">
           {props.images.map((img, index) => {
             const a = figureArrangeArr.value[index] || { pos: { left: 0, top: 0 }, rotate: 0, isReverse: false, isCenter: false }
-            return <ImageCard key={index} data={img} id={"figure" + index} arrange={a} onCardClick={putFigureCenter(index)} />
+            return <ImageCard key={index} data={img} id={"figure" + index} arrange={a} onCard-click={putFigureCenter(index)} />
           })}
         </div>
         <nav class="img-nav">
           {props.images.map((_, index) => {
             const a = figureArrangeArr.value[index] || { pos: { left: 0, top: 0 }, rotate: 0, isReverse: false, isCenter: false }
-            return <Controller key={index} arrange={a} onCtrlClick={putFigureCenter(index)} />
+            return <Controller key={index} arrange={a} onCtrl-click={putFigureCenter(index)} />
           })}
         </nav>
       </div>
